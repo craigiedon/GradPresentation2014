@@ -1,0 +1,22 @@
+var steps = $(".step");
+var slides = $(".slide");
+
+var r = 3000;
+var currentSlide = 0;
+$("step").each(function(index){
+    var theta = currentSlide / (steps.length-1) * 2 * Math.PI - Math.PI / 2;
+    var x = r * Math.cos(theta);
+    var y = r * Math.sin(theta);
+    
+    steps[i].setAttribute("data-x", Math.round(x).toString());
+    steps[i].setAttribute("data-y", Math.round(y).toString());
+});
+
+
+
+
+var overview = document.getElementById("overview");
+overview.setAttribute("data-x", "0");
+overview.setAttribute("data-y", "0");
+overview.setAttribute("data-scale", "8");
+impress().init();
